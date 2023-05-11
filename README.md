@@ -1,2 +1,2 @@
 # digital-business-card
- scrimba react project
+ This business card project is provided by Scrimba's React course as the first solo React project with design provided in [Figma](https://www.figma.com/file/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card?node-id=0%3A1). As a bonus, I coded both a light and dark mode palette. Image credit for the plant lady with books illustration by [Themeisle's IlluStation](https://themeisle.com/illustrations/).
