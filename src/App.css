@@ -1,0 +1,161 @@
+:root {
+  --root-bg: #23252C;
+  --container-bg: #1A1B21; 
+  --container-text: #DCDCDC; 
+  --social-bg: #161619;
+  --info-name: #FFF;
+  --info-title: #ffB4E6;
+  /* #F3BF99; */
+  --info-url: #F5F5F5;
+  --link-hover: #B4FFF3;
+}
+
+@media (prefers-color-scheme:light) {
+  :root {
+    --root-bg: #23252C;
+    --container-bg: #F5F5F5; 
+    --container-text: #4A4E74; 
+    --social-bg: #D5D4D8;
+    --info-name: #2B283A;
+    --info-title: #477C59;
+    --info-url: #4A4E74;
+    --link-hover: #2D9F51;
+  }
+  .is-dark {
+    display:none !important;
+  }
+  .is-light {
+    display:initial !important;
+  }
+}
+
+.is-dark {
+  display:initial;
+}
+.is-light {
+  display:none;
+}
+
+html {
+  background-color:var(--root-bg) !important; /* prevent inline light mode from flipping bg color to light */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,h2,h3,h4,h5,h6,p {
+  margin:0;
+}
+#root {
+  width:100%;
+}
+.container {
+  background-color:var(--container-bg);
+  border-radius:15px;
+  margin:44px auto;
+  max-width:317px;
+  width:100%;
+
+  /* remove when headshot is taken and added */
+  padding-top:20px;
+}
+.main--info,
+.main--section {
+  padding: 0 35px;
+}
+.main--info {
+  text-align:center;
+}
+.main--info_img {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  max-width:100%;
+}
+.main--info_drawing {
+  max-width:100%;
+}
+.main--info_name {
+  color:var(--info-name);
+  font-size:calc(25/16 * 1em);
+}
+.main--info_img + .main--info_drawing {
+  margin-top:20px;
+}
+.main--info_title {
+  color:var(--info-title);
+  font-size:calc(13/16 * 1em);
+  font-weight:400;
+  margin-top:8px;
+}
+.main--info_url {
+  font-size:calc(11/16 * 1em);
+  font-weight:400;
+  margin-top:8px;
+}
+.main--info_url > a {
+  color:var(--info-url);
+  transition:.3s all ease-in-out;
+}
+.main--info_url > a:hover {
+  color:var(--link-hover);
+  transition:.3s all ease-in-out;
+}
+.main--info_buttons {
+  align-items:center;
+  display:flex;
+  margin-top:15px;
+}
+.main--info_buttons > a {
+  align-items: center;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  font-size:calc(14/16 * 1em);
+  gap: 8px;
+  justify-content: center;
+  line-height:1;
+
+  padding: 9px 13px 9px 11px;
+  width:100%;
+}
+.main--info_mail, .main--info_mail:hover {
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  color:#374151;
+}
+.main--info_linkedIn, .main--info_linkedIn:hover {
+  background: #5093E2;
+  color:#fff;
+  margin-left:auto;
+}
+.main--info + .main--section {
+  margin-top:30px;
+}
+.main--section + .main--section {
+  margin-top:24px;
+}
+.main--section_title {
+  font-size:1em;
+}
+.main--section_content {
+  color:var(--container-text);
+  font-size:calc(11/16 * 1em);
+  margin-top:6px;
+}
+.main--social {
+  background-color:var(--social-bg);
+  margin-top:24px;
+  padding:20px 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.main--social_icons {
+  align-items:center;
+  display:flex;
+  justify-content:space-between;
+  list-style-type:none;
+  margin:0 auto;
+  padding:0;
+  max-width:76px;
+}
